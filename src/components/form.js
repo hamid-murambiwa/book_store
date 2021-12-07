@@ -1,29 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
+
+const genres = ['Romance', 'History', 'Drama', 'Memoir', 'Politics', 'Self-Help', 'Horror', 'Young Adult', 'Children’s Books', 'Crime Thriller', 'Tragedy', 'Literary Fiction', 'Science Fiction', 'Gothic', 'Philosophy', 'Food'];
 
 function AddBook() {
+  const [genre, setGenre] = useState(genres[0]);
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const handlegenre = (event) => setGenre(event.target.value);
+  const handleTitle = (event) => setTitle(event.target.value);
+  const handleAuthor = (event) => setAuthor(event.target.value);
+  const dispatch = useDispatch();
+
+  const submitBookToStore = (event) => {
+    const newBook = {
+      id: Math.random()
+        .toString(36)
+        .replace(/[^a-z]+/g, '')
+        .substr(0, 5),
+      title,
+      author,
+      genre,
+    };
+
+    dispatch(addBook(newBook));
+    setTitle('');
+    setAuthor('');
+    setGenre(genres[0]);
+    event.preventDefault();
+    document.getElementById('myForm').reset();
+  };
+
   return (
     <section className="form-con">
       <h2>ADD NEW BOOK</h2>
-      <form>
-        <input type="text" placeholder="Book title" />
-        <select name="categories" id="books" placeholder="Category">
-          <option value="">Category</option>
-          <option value="Action">Action</option>
-          <option value="Food">Food</option>
-          <option value="History">History</option>
-          <option value="Memoir">Memoir</option>
-          <option value="Politics">Politics</option>
-          <option value="Self-Help">Self-Help</option>
-          <option value="Young Adult">Young Adult</option>
-          <option value="Children’s Books">Children’s Books</option>
-          <option value="Crime Thriller">Crime Thriller</option>
-          <option value="Literary Fiction">Literary Fiction</option>
-          <option value="Science Fiction">Science Fiction</option>
-          <option value="Philosophy">Philosophy</option>
-          <option value="Poetry">Poetry</option>
-          <option value="Romance">Romance</option>
+      <form id="myForm" onSubmit={submitBookToStore}>
+        <input id="title" type="text" onChange={handleTitle} placeholder="Book title" required />
+        <input id="author" type="text" name="author" onChange={handleAuthor} placeholder="Author" required />
+        <select value={genre} onChange={handlegenre}>
+          {genres.map((genre) => (
+            <option key={genre} value={genre}>{genre}</option>
+          ))}
         </select>
-        <button type="submit">
+        <button type="submit" value="ADD BOOK">
           ADD BOOK
         </button>
       </form>

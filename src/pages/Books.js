@@ -1,15 +1,10 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
 function Books() {
-  const booklist = [{
-    id: '1', title: 'Get rich or die trying', author: 'Curtis Jackson', genre: 'Action',
-  },
-  {
-    id: '2', title: '48 laws of power', author: 'Robert Greene', genre: 'Action',
-  },
-  {
-    id: '3', title: 'Mastery', author: 'Robert Greene', genre: 'Action',
-  }];
+  const booklist = useSelector((state) => state.booksReducer);
+  const dispatch = useDispatch();
   return (
     <div className="book-con">
       {booklist.map((book) => (
@@ -30,7 +25,7 @@ function Books() {
               </button>
             </li>
             <li>
-              <button type="button">
+              <button type="button" onClick={() => dispatch(removeBook(book.id))}>
                 Remove
               </button>
             </li>
