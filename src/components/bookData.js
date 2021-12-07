@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Books() {
+function bookslist() {
   const booklist = [{
     id: '1', title: 'Get rich or die trying', author: 'Curtis Jackson', genre: 'Action',
   },
@@ -10,6 +10,7 @@ function Books() {
   {
     id: '3', title: 'Mastery', author: 'Robert Greene', genre: 'Action',
   }];
+
   return (
     <div className="book-con">
       {booklist.map((book) => (
@@ -45,5 +46,4 @@ function Books() {
     </div>
   );
 }
-
-export default Books;
+export default bookslist;
