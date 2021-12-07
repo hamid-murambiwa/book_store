@@ -6,12 +6,12 @@ import {
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 import NavBar from './components/navbar';
-import AddBook from './components/form'
+import AddBook from './components/form';
 
 function App() {
   return (
     <section>
-     <NavBar />
+      <NavBar />
       <Routes>
         <Route exact path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
