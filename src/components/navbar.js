@@ -18,7 +18,7 @@ function NavBar() {
         </ul>
       </section>
       <div className="acc-btn">
-        <button className="user-btn">
+        <button type="submit" className="user-btn">
           <img src="https://img.icons8.com/external-kmg-design-flat-kmg-design/50/000000/external-user-user-interface-kmg-design-flat-kmg-design-1.png" alt="account icon" />
         </button>
       </div>

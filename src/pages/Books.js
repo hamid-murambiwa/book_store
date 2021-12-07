@@ -1,30 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Books(books) {
+function Books({ book }) {
   return (
     <div className="book-con">
       <h3>
-        {books.genre}
+        {book.genre}
       </h3>
       <h1>
-        {books.title}
+        {book.title}
       </h1>
       <p>
-        {books.author}
+        {book.author}
       </p>
       <ul className="navs">
         <li>
-          <button>
+          <button type="button">
             Comments
           </button>
         </li>
         <li>
-          <button>
+          <button type="button">
             Remove
           </button>
         </li>
         <li>
-          <button>
+          <button type="button">
             Edit
           </button>
         </li>
@@ -33,10 +34,18 @@ function Books(books) {
   );
 }
 
+Books.propTypes = {
+  book: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    genre: PropTypes.string,
+  }),
+};
+
 Books.defaultProps = {
-  title: 'get rich or die tryings',
-  author: 'curtis jackson',
-  genre: 'action',
+  book: {
+    title: 'Get rich or die trying', author: 'Curtis Jackson', genre: 'Action',
+  },
 };
 
 export default Books;
