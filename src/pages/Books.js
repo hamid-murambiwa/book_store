@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBook, getBOOKS } from '../redux/books/books';
 
 function Books() {
   const booklist = useSelector((state) => state.booksReducer);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBOOKS());
+  }, [dispatch]);
+
   return (
     <div className="book-con">
       {booklist.map((book) => (
         <div key={book.id}>
           <h3>
-            {book.genre}
+            {book.category}
           </h3>
           <h1>
             {book.title}
           </h1>
-          <p>
-            {book.author}
-          </p>
           <ul className="navs">
             <li>
               <button type="button">
