@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as API from '../API/api';
 import { addBook } from '../redux/books/books';
+import '../styling/form.css';
 
 const categories = ['Romance', 'History', 'Drama', 'Memoir', 'Politics', 'Self-Help', 'Horror', 'Young Adult', 'Children’s Books', 'Crime Thriller', 'Tragedy', 'Literary Fiction', 'Science Fiction', 'Gothic', 'Philosophy', 'Food'];
 
@@ -39,12 +40,12 @@ function AddBook() {
       <h2>ADD NEW BOOK</h2>
       <form id="myForm" onSubmit={submitBookToStore}>
         <input id="title" type="text" onChange={handleTitle} placeholder="Book title" required />
-        <select value={category} onChange={handlecategory}>
+        <select id="select" value={category} onChange={handlecategory}>
           {categories.map((category) => (
             <option key={category} value={category}>{category}</option>
           ))}
         </select>
-        <button type="submit" value="ADD BOOK">
+        <button id="add-book" type="submit" value="ADD BOOK">
           ADD BOOK
         </button>
       </form>

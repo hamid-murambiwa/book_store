@@ -1,8 +1,9 @@
 import React from 'react';
+import '../styling/categories.css';
 
 function Categories() {
   return (
-    <div>Under construction</div>
+    <div className="obt">Under construction</div>
   );
 }
 

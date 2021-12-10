@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import Books from './pages/Books';
 import Categories from './pages/Categories';
 import NavBar from './components/navbar';
-import AddBook from './components/form';
 import store from './redux/configureStore';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/books" element={<Books />} />
         </Routes>
-        <AddBook />
       </section>
     </Provider>
   );

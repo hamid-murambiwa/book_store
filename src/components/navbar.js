@@ -14,7 +14,7 @@ function NavBar() {
             <Link to="/books" className="links">BOOKS</Link>
           </li>
           <li>
-            <Link to="/categories" className="links">CATEGORIES</Link>
+            <Link to="/categories" className="links links-B">CATEGORIES</Link>
           </li>
         </ul>
       </section>
