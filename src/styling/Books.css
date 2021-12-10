@@ -33,6 +33,11 @@
 
 .book-info {
   width: 40%;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black-2);
 }
 
 .book-info h1 {
@@ -41,12 +46,7 @@
   margin: 0.188rem 20.188rem 0 0;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 1.375rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: -0.2px;
-  color: var(--black-2);
 }
 
 .book-info h3 {
@@ -55,12 +55,7 @@
   margin: 0 2.438rem 10px 0;
   opacity: 0.5;
   font-size: 0.875rem;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
   letter-spacing: normal;
-  color: var(--black-2);
 }
 
 .navs {
