@@ -11,10 +11,10 @@ function NavBar() {
         </h1>
         <ul className="list-nav">
           <li>
-            <Link to="/books" className="links">BOOKS</Link>
+            <Link to="/books" className="links-A">BOOKS</Link>
           </li>
           <li>
-            <Link to="/categories" className="links">CATEGORIES</Link>
+            <Link to="/categories" className="links-B">CATEGORIES</Link>
           </li>
         </ul>
       </section>
