@@ -3,7 +3,12 @@
 > "Bookstore" is a web application for all fans of books. It is a Single Page App (SPA) that allows users to:
 
 - Create and remove a book.
-![an image of the Book store  webpage](https://github.com/hamid-murambiwa/home-page-image/blob/master/home-page.png)
+
+![an image of the Book store webpage](https://user-images.githubusercontent.com/71644515/158050104-515d0c1a-5171-4d40-ad16-3d951e2b11d7.png)
+
+## Live Demo
+
+[Live Demo Link](https://622d971e9707607970642c32--hungry-wilson-4b617e.netlify.app/)
 
 ## Built With
 
