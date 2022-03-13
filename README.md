@@ -3,7 +3,7 @@
 > "Bookstore" is a web application for all fans of books. It is a Single Page App (SPA) that allows users to:
 
 - Create and remove a book.
-
+![an image of the Book store  webpage](https://github.com/hamid-murambiwa/home-page-image/blob/master/home-page.png)
 
 ## Built With
 
@@ -41,13 +41,13 @@ npx stylelint "**/*.{css,scss}"
 ```
 npx eslint .
 ```
-## Authors
+## Author
 
 👤 **Hamid Murambiwa**
 
-- GitHub: [@githubhandle](https://github.com/hamid-murambiwa)
-- Twitter: [@twitterhandle](https://twitter.com/Hamid87789454)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hamid-murambiwa-8a9a9520a/)
+- GitHub: [@hamid-murambiwa](https://github.com/hamid-murambiwa/)
+- Twitter: [@Hamid87789454](https://twitter.com/Hamid87789454/)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/hamid-murambiwa/)
 
 ## 🤝 Contributing
 
